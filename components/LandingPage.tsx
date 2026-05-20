@@ -54,7 +54,7 @@ function Nav() {
           <span className="brand-name">Railaite</span>
         </a>
         <div className="nav__cta">
-          <a href="#comecar" className="btn btn--primary">Lista de acesso</a>
+          <a href="#comecar" className="btn btn--primary">Lista de espera</a>
         </div>
       </div>
     </nav>
@@ -67,17 +67,13 @@ function Hero() {
       <div className="container">
         <div className="hero__grid">
           <Reveal>
-            <span className="hero__eyebrow">
-              <span className="dot"></span>
-              Lista de acesso aberta · Brasil
-            </span>
             <h1>
               Uma forma mais calma<br />
               de cuidar dos seus <span className="hl">atendimentos</span>.
             </h1>
             <div className="hero__ctas">
               <a href="#comecar" className="btn btn--primary btn--lg">
-                Entrar na lista de acesso
+                Entrar na lista de espera
                 <Icon name="arrow-right" size={15} className="arrow" />
               </a>
             </div>
@@ -115,7 +111,6 @@ function TrustStrip() {
     { label: 'WhatsApp', icon: 'whatsapp' },
     { label: 'Google Calendar', icon: 'calendar' },
     { label: 'Google Drive', icon: 'drive' },
-    { label: 'Focus NFE', icon: 'receipt' },
   ]
   return (
     <div className="trust">
@@ -157,7 +152,7 @@ function SellingPoints() {
   return (
     <section id="produto">
       <div className="container">
-        <div className="s-head" style={{ gridTemplateColumns: '1fr', marginBottom: 48 }}>
+        <div className="s-head" style={{ gridTemplateColumns: '1fr', gap: 0, marginBottom: 24 }}>
           <Reveal>
             <span className="s-eyebrow">O que você ganha</span>
             <h2 className="s-lede s-head__title">
@@ -249,30 +244,6 @@ function ProductPreview() {
   )
 }
 
-function Manifesto() {
-  return (
-    <section id="para-voce" className="section--lg">
-      <div className="container container--narrow emotional">
-        <Reveal>
-          <span className="s-eyebrow s-eyebrow--center">Para o profissional clínico</span>
-        </Reveal>
-        <Reveal delay={80}>
-          <p className="manifesto__intro">
-            Organize a parte operacional dos seus atendimentos sem perder tempo com ele.
-          </p>
-        </Reveal>
-        <Reveal delay={160}>
-          <p className="manifesto__text">
-            Atender já exige presença suficiente.<br />
-            O restante da rotina não deveria disputar sua atenção o tempo inteiro.<br />
-            Railaite organiza o operacional da clínica de forma simples, para você<br />
-            voltar a focar no que realmente importa: o atendimento.
-          </p>
-        </Reveal>
-      </div>
-    </section>
-  )
-}
 
 function LeadCapture() {
   const [email, setEmail] = useState('')
@@ -301,8 +272,8 @@ function LeadCapture() {
           <div className="lead-capture__grid">
             <div>
               <h3>
-                Entre na lista de<br />
-                <em>acesso antecipado.</em>
+                Entre na<br />
+                <em>lista de espera.</em>
               </h3>
               <p className="blurb">
                 Sem cartão de crédito. Você só paga quando faz sentido.
@@ -352,7 +323,7 @@ function LeadCapture() {
                   </p>
                 )}
                 <button type="submit" className="btn btn--primary btn--lg" style={{ marginTop: 6 }} disabled={status === 'loading'}>
-                  {status === 'loading' ? 'Enviando…' : 'Entrar na lista de acesso'}
+                  {status === 'loading' ? 'Enviando…' : 'Entrar na lista de espera'}
                   {status !== 'loading' && <Icon name="arrow-right" size={15} className="arrow" />}
                 </button>
                 <div className="form__footer">
@@ -378,16 +349,12 @@ function Footer() {
               <BrandMark size="sm" />
               <span className="brand-name">Railaite</span>
             </div>
-            <p className="footer__about">
-              Uma forma mais calma de gerir um consultório particular.
-              Feito no Brasil, em português, para o dia-a-dia clínico.
-            </p>
           </div>
           <div>
             <div className="footer__col-title">Produto</div>
             <div className="footer__list">
               <a href="#produto">Funcionalidades</a>
-              <a href="#comecar">Lista de acesso</a>
+              <a href="#comecar">Lista de espera</a>
             </div>
           </div>
           <div>
@@ -425,7 +392,6 @@ export function LandingPage() {
         <TrustStrip />
         <SellingPoints />
         <ProductPreview />
-        <Manifesto />
         <LeadCapture />
       </main>
       <Footer />
