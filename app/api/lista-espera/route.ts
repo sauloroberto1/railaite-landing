@@ -26,7 +26,7 @@ export async function POST(req: Request) {
         <p>Obrigado pelo interesse. Você será um dos primeiros a ter acesso.</p>
         <p>Em breve entraremos em contato com seu convite.</p>
         <br>
-        <p style="color:#888;font-size:13px">"Dê um railaite no que realmente importa."</p>
+        <p style="color:#888;font-size:13px">"Dê um Railaite no que realmente importa."</p>
         <p style="color:#888;font-size:13px">— Equipe Railaite</p>
       </div>
     `,

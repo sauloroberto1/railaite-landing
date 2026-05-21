@@ -78,8 +78,8 @@ function Hero() {
         <div className="hero__grid">
           <Reveal>
             <h1>
-              Uma forma mais calma<br />
-              de cuidar dos seus <span className="hl">atendimentos</span>.
+              Uma forma mais <span className="hl">leve</span><br />
+              de organizar seus atendimentos.
             </h1>
             <div className="hero__ctas">
               <a href="#comecar" className="btn btn--primary btn--lg">
