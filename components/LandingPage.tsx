@@ -54,6 +54,16 @@ function Nav() {
           <span className="brand-name">Railaite</span>
         </a>
         <div className="nav__cta">
+          <a
+            href="https://app.railaite.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: 14, color: 'var(--stone-500)', fontWeight: 500, transition: 'color var(--duration-base)', textDecoration: 'none' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'var(--stone-800)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'var(--stone-500)')}
+          >
+            Entrar
+          </a>
           <a href="#comecar" className="btn btn--primary">Lista de espera</a>
         </div>
       </div>

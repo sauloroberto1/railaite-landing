@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- top-left corner -->
+  <polyline points="12,4 4,4 4,12" stroke="#496840" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- top-right corner -->
+  <polyline points="20,4 28,4 28,12" stroke="#496840" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- bottom-left corner -->
+  <polyline points="12,28 4,28 4,20" stroke="#496840" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- bottom-right corner -->
+  <polyline points="20,28 28,28 28,20" stroke="#496840" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- center dot -->
+  <circle cx="16" cy="16" r="4" fill="#d9a85f"/>
+</svg>
