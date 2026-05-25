@@ -255,6 +255,101 @@ function ProductPreview() {
 }
 
 
+function FeatureItem({ children }: { children: ReactNode }) {
+  return (
+    <li className="flex items-start gap-2.5 text-sm text-stone-600">
+      <span className="text-stone-400 mt-0.5 flex-shrink-0">✓</span>
+      {children}
+    </li>
+  )
+}
+
+function Pricing() {
+  return (
+    <section>
+      <div className="container">
+        <div className="text-center mb-10">
+          <p className="text-xs uppercase tracking-widest text-stone-400 font-medium mb-3">
+            Planos
+          </p>
+          <h2 className="text-3xl font-medium text-stone-900">
+            Simples assim.
+          </h2>
+        </div>
+
+        <div className="text-center mb-8">
+          <span className="inline-flex items-center gap-2 text-sm text-stone-500 border border-stone-200 rounded-full px-4 py-1.5">
+            ✦ 14 dias grátis em qualquer plano · Sem cartão de crédito
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
+          <div className="border border-stone-200 rounded-2xl p-7 bg-white flex flex-col">
+            <div className="mb-6">
+              <p className="text-xs uppercase tracking-widest text-stone-400 font-medium mb-1">Essencial</p>
+              <p className="text-sm text-stone-500 mt-1 mb-3">Para quem está começando ou não emite nota fiscal.</p>
+              <div className="flex items-baseline gap-1">
+                <span className="text-3xl font-semibold text-stone-900">R$ 49,90</span>
+                <span className="text-sm text-stone-400">/mês</span>
+              </div>
+            </div>
+            <ul className="flex flex-col gap-2.5 mb-8 flex-1">
+              <FeatureItem>Agenda e sessões ilimitadas</FeatureItem>
+              <FeatureItem>Pacientes ilimitados</FeatureItem>
+              <FeatureItem>Google Calendar + Meet integrado</FeatureItem>
+              <FeatureItem>Anotações via Google Drive</FeatureItem>
+              <FeatureItem>Cobrança Pix via WhatsApp</FeatureItem>
+              <FeatureItem>Controle financeiro básico</FeatureItem>
+            </ul>
+            <a
+              href="https://app.railaite.com.br/sign-up"
+              className="w-full text-center py-3 rounded-xl text-sm font-medium transition-colors mt-auto bg-stone-900 text-stone-50 hover:bg-stone-700"
+            >
+              Começar grátis por 14 dias
+            </a>
+            <p className="text-center text-xs text-stone-400 mt-2">Sem cartão de crédito</p>
+          </div>
+
+          <div className="border-2 border-stone-700 rounded-2xl p-7 bg-white flex flex-col relative">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-800 text-stone-100 text-xs font-medium px-3 py-1 rounded-full">
+              Mais completo
+            </span>
+            <div className="mb-6">
+              <p className="text-xs uppercase tracking-widest text-stone-400 font-medium mb-1">Profissional</p>
+              <p className="text-sm text-stone-500 mt-1 mb-3">Para quem tem CNPJ e emite nota fiscal.</p>
+              <div className="flex items-baseline gap-1">
+                <span className="text-3xl font-semibold text-stone-900">R$ 99,90</span>
+                <span className="text-sm text-stone-400">/mês</span>
+              </div>
+            </div>
+            <ul className="flex flex-col gap-2.5 mb-8 flex-1">
+              <li className="flex items-start gap-2.5 text-sm text-stone-400 italic mb-2">
+                <span className="mt-0.5 flex-shrink-0">↳</span>
+                Tudo do Essencial
+              </li>
+              <FeatureItem>Emissão de NFS-e integrada</FeatureItem>
+              <FeatureItem>Análise automática de NF por IA</FeatureItem>
+              <FeatureItem>Dashboard financeiro completo</FeatureItem>
+              <FeatureItem>Suporte prioritário</FeatureItem>
+            </ul>
+            <a
+              href="https://app.railaite.com.br/sign-up"
+              className="w-full text-center py-3 rounded-xl text-sm font-medium transition-colors mt-auto bg-stone-900 text-stone-50 hover:bg-stone-700"
+            >
+              Começar grátis por 14 dias
+            </a>
+            <p className="text-center text-xs text-stone-400 mt-2">Sem cartão de crédito</p>
+          </div>
+        </div>
+
+        <p className="text-center text-sm text-stone-400 mt-6 max-w-sm mx-auto">
+          Emitir uma NF manualmente leva ~20 minutos. Com 20 sessões por semana, são 4 horas por mês. O Profissional custa R$ 99,90 e elimina esse trabalho.
+        </p>
+      </div>
+    </section>
+  )
+}
+
 function LeadCapture() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
@@ -402,6 +497,7 @@ export function LandingPage() {
         <TrustStrip />
         <SellingPoints />
         <ProductPreview />
+        <Pricing />
         <LeadCapture />
       </main>
       <Footer />
