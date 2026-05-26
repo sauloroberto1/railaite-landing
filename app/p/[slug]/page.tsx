@@ -20,7 +20,7 @@ interface Perfil {
 async function getPerfil(slug: string): Promise<Perfil | null> {
   try {
     const res = await fetch(
-      `https://app.railaite.com.br/api/public/perfil/${slug}`,
+      `${process.env.APP_URL ?? 'https://app.railaite.com.br'}/api/public/perfil/${slug}`,
       {
         headers: {
           'x-public-api-key': process.env.PUBLIC_API_KEY ?? '',
