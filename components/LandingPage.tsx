@@ -291,6 +291,8 @@ function Pricing() {
             <li>Controle financeiro</li>
           </ul>
 
+          <hr className="pricing-divider" />
+
           <a
             href="https://app.railaite.com.br/sign-up"
             className="pricing-cta pricing-cta--secondary"
@@ -326,6 +328,8 @@ function Pricing() {
             <li>Dashboard financeiro completo</li>
             <li>Suporte prioritário</li>
           </ul>
+
+          <hr className="pricing-divider" />
 
           <a
             href="https://app.railaite.com.br/sign-up"

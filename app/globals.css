@@ -533,7 +533,7 @@ section.section--sm { padding: 56px 0; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 @media (max-width: 640px) {
@@ -548,6 +548,7 @@ section.section--sm { padding: 56px 0; }
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 
 .pricing-card--featured {
@@ -631,7 +632,7 @@ section.section--sm { padding: 56px 0; }
 .pricing-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
@@ -663,6 +664,12 @@ section.section--sm { padding: 56px 0; }
 
 .pricing-feature--inherit::before { content: '' !important; }
 
+.pricing-divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 1.5rem 0;
+}
+
 .pricing-cta {
   display: block;
   text-align: center;
@@ -673,6 +680,7 @@ section.section--sm { padding: 56px 0; }
   text-decoration: none;
   transition: opacity 0.15s ease;
   letter-spacing: 0.01em;
+  margin-top: auto;
 }
 
 .pricing-cta:hover { opacity: 0.8; text-decoration: none; }
